@@ -70,7 +70,7 @@ local function playerConnect( ply )
 			["username"] = Discord.hookname,
 			["embeds"] = {{
 				["author"] = {
-					["name"] = ply.name .. " подключается...",
+					["name"] = ply.name .. " connecting...",
 					["icon_url"] = tmpAvatars[steamid64],
 					["url"] = 'https://steamcommunity.com/profiles/' .. steamid64,
 				},
@@ -104,7 +104,7 @@ local function plyFrstSpawn(ply)
 				["username"] = Discord.hookname,
 				["embeds"] = {{
 					["author"] = {
-						["name"] = ply:Nick() .. " подключился",
+						["name"] = ply:Nick() .. " connected",
 						["icon_url"] = tmpAvatars[steamid64],
 						["url"] = 'https://steamcommunity.com/profiles/' .. steamid64,
 					},
@@ -137,7 +137,7 @@ local function plyDisconnect(ply)
 			["username"] = Discord.hookname,
 			["embeds"] = {{
 				["author"] = {
-					["name"] = ply.name .. " отключился",
+					["name"] = ply.name .. " disconnected",
 					["icon_url"] = tmpAvatars[steamid64],
 					["url"] = 'https://steamcommunity.com/profiles/' .. steamid64,
 				},
@@ -175,8 +175,8 @@ hook.Add("Initialize", "!!discord_srvStarted", function()
 	local form = {
 		["username"] = Discord.hookname,
 		["embeds"] = {{
-			["title"] = "Сервер запущен!",
-			["description"] = "Карта сейчас - " .. game.GetMap(),
+			["title"] = "Server Started!",
+			["description"] = "Current Map - " .. game.GetMap(),
 			["color"] = 5793266
 		}}
 	}
